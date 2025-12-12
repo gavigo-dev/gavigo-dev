@@ -4,8 +4,12 @@ export default defineNuxtPlugin(() => {
     return {
         provide: {
             piniaPersist: (context: PiniaPluginContext) => {
-                const { store } = context
-                const key = `store-${store.$id}`
+                const { options, store } = context
+                const persistOptions = (options as any).$persistOptions
+
+                if (!persistOptions) return
+
+                const key = persistOptions.key || store.$id
 
                 // carregar do localStorage
                 const stored = localStorage.getItem(key)
