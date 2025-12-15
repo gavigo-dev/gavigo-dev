@@ -5,7 +5,7 @@ export const PROJECTS = [
         name: 'Stranger Detective',
         description:
             'Um app auxiliar para o jogo de tabuleiro Detetive, porém numa versão customizada com o tema baseado na série Stranger Things',
-        preview: 'stranger-detective',
+        preview: '',
         behance: ''
     },
     {

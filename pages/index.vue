@@ -2,7 +2,7 @@
     <div class="pt-5 md:pt-0">
         <h1 class="hidden">Gavigo.dev</h1>
 
-        <Toolbar class="p-5 bg-transparent border-0">
+        <Toolbar class="p-5">
             <template #start>
                 <div class="">
                     <a href="#">
@@ -25,7 +25,7 @@
 
             <template #end>
                 <div class="hidden md:flex gap-1 justify-end w-full">
-                    <Button class="bg-transparent text-inherit text-xl">
+                    <Button class="text-xl">
                         <a href="https://github.com/gavigo-dev" target="_blank">
                             <i class="pi pi-github" />
                         </a>
@@ -35,12 +35,7 @@
                 </div>
 
                 <div class="md:hidden">
-                    <Button
-                        icon="pi pi-bars"
-                        variant="text"
-                        class="bg-transparent text-inherit text-xl"
-                        @click="openMenu"
-                    />
+                    <Button icon="pi pi-bars" class="text-xl" @click="openMenu" />
 
                     <Popover ref="menuPop">
                         <div class="p-5 w-40">
@@ -51,7 +46,7 @@
                             </div>
 
                             <div class="mt-5 flex gap-1 justify-center w-full">
-                                <Button class="bg-transparent text-inherit text-2xl">
+                                <Button class="text-2xl">
                                     <a href="https://github.com/gavigo-dev" target="_blank">
                                         <i class="pi pi-github" />
                                     </a>
@@ -102,7 +97,7 @@
                         </a>
                     </Button>
                 </div>
-                <div class="w-170 md:w-auto rounded-lg overflow-hidden">
+                <div class="w-170 md:w-120 rounded-lg overflow-hidden">
                     <Avatar
                         image="/img/eu.jpg"
                         shape="circle"
@@ -136,13 +131,19 @@
                     </div>
                 </div>
 
-                <Popover ref="projectPop">
+                <Popover
+                    ref="projectPop"
+                    :pt="{
+                        root: 'border border-indigo-500 rounded my-2',
+                        transition: 'p-anchored-overlay'
+                    }"
+                >
                     <div class="p-5 w-80">
                         <h5 class="text-lg font-bold">{{ selectedProject.name }}</h5>
                         <p class="my-3">{{ selectedProject.description }}</p>
                         <div class="flex gap-3">
                             <Button
-                                class="bg-transparent text-inherit flex-1 border"
+                                class="flex-1 border"
                                 label="Ver projeto"
                                 icon="pi pi-external-link"
                                 disabled
