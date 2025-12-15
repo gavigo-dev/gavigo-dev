@@ -6,7 +6,7 @@ export const PROJECTS = [
         description:
             'Um app auxiliar para o jogo de tabuleiro Detetive, porém numa versão customizada com o tema baseado na série Stranger Things',
         preview: '',
-        behance: ''
+        behance: 'https://www.behance.net/gallery/240495929/Stranger-Detective'
     },
     {
         id: 2,

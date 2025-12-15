@@ -144,10 +144,13 @@
                         <div class="flex gap-3">
                             <Button
                                 class="flex-1 border"
-                                label="Ver projeto"
-                                icon="pi pi-external-link"
-                                disabled
-                            />
+                                :disabled="!selectedProject.behance"
+                                @click="openLink(selectedProject.behance)"
+                            >
+                                <i class="fab fa-behance"></i>
+                                - Projeto
+                                <i class="pi pi-external-link"></i>
+                            </Button>
                             <Button
                                 class="flex-1 bg-indigo-500 text-indigo-50"
                                 label="Preview"
@@ -192,7 +195,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.behance.net/gabrielgomes72" target="_blank">
+                    <a href="https://www.behance.net/gavigo-dev" target="_blank">
                         <i class="fa-brands fa-behance"></i>
                     </a>
                 </li>
@@ -230,5 +233,9 @@ const displayProject = (event, project) => {
             projectPop.value.show(event)
         })
     }
+}
+
+const openLink = (link) => {
+    window.open(link, '_blank')
 }
 </script>
