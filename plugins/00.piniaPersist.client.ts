@@ -5,6 +5,7 @@ export default defineNuxtPlugin(() => {
         provide: {
             piniaPersist: (context: PiniaPluginContext) => {
                 const { options, store } = context
+
                 const persistOptions = (options as any).$persistOptions
 
                 if (!persistOptions) return

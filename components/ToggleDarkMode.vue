@@ -1,10 +1,12 @@
 <template>
-    <Button
-        :icon="icon"
-        aria-label="Toggle Dark Mode"
-        class="text-2xl text-neutral-700 dark:text-neutral-300"
-        @click="theme.toggleDarkMode"
-    />
+    <ClientOnly>
+        <Button
+            :icon="icon"
+            aria-label="Toggle Dark Mode"
+            class="bg-transparent text-2xl text-neutral-700 dark:text-neutral-300"
+            @click="theme.toggleDarkMode"
+        />
+    </ClientOnly>
 </template>
 
 <script lang="ts" setup>
