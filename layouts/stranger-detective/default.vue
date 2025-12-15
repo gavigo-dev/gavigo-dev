@@ -29,16 +29,6 @@
 </template>
 
 <script setup>
-useSeoMeta({
-    title: 'Stranger Detective App',
-    description: 'App to help playing stranger detective',
-    ogTitle: 'Stranger Detective - gavigo.dev',
-    ogDescription: 'App to help playing stranger detective',
-    ogImage: '/img/stranger-detective/project-cover.png',
-    ogUrl: 'https://gavigo-dev.netlify.app/stranger-detective',
-    twitterCard: 'summary_large_image'
-})
-
 const loading = ref(true)
 
 onMounted(() => {
